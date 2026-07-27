@@ -1,13 +1,217 @@
+
 <!DOCTYPE html>
-<html lang="en pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enciclopédia & Ateliê Gastronômico</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Inteligencia Artificial</h1>
-    <h2>NO que a IA pode ajudar no dia a dia?</h2>
 
+    <header class="header">
+        <div class="logo">
+            <h1>🍇 Ateliê da Culinária</h1>
+            <p>Técnicas, ciência dos alimentos e receitas explicadas ao detalhe</p>
+        </div>
+        <nav class="nav-bar">
+            <a href="#inicio">Início</a>
+            <a href="#filosofia">Nossa Filosofia</a>
+            <a href="#receitas">Receitas Detalhadas</a>
+            <a href="#tecnicas">Guia de Técnicas</a>
+            <a href="#galeria">Mural Visual</a>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero-banner">
+        <h2>A Ciência e a Paixão Por Trás de Cada Prato</h2>
+        <p>
+            Cozinhar vai muito além de seguir instruções: é entender como a temperatura modifica as proteínas, como a acidez equilibra a gordura e como o tempo transforma aromas simples em experiências inesquecíveis. Explore nosso guia completo feito para transformar cozinheiros iniciantes em verdadeiros mestres na cozinha.
+        </p>
+    </section>
+
+    <section id="filosofia" class="secao-filosofia">
+        <div class="container">
+            <h2>Por que Dominar as Bases Culinárias?</h2>
+            <div class="filosofia-grid">
+                <div class="filosofia-card">
+                    <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=600&q=80" alt="Cozinha Profissional">
+                    <h3>Mise en Place Perfeito</h3>
+                    <p>O termo francês que significa "por no lugar" é a regra de ouro dos grandes chefs. Organizar, cortar, medir e separar todos os ingredientes antes de acender o fogão garante controle total sobre os tempos de cozimento e evita erros desnecessários.</p>
+                </div>
+                <div class="filosofia-card">
+                    <img src="https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?w=600&q=80" alt="Temperos e Ervas Frescas">
+                    <h3>A Alquimia dos Temperos</h3>
+                    <p>Dominar o uso de ervas frescas e especiarias secas é o divisor de águas na cozinha. Entender o momento exato de adicionar cada tempero — seja no início para criar uma base aromática ou no final para preservar o frescor — transforma receitas comuns em pratos extraordinários.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="search-section">
+        <input type="text" id="searchInput" onkeyup="filtrarReceitas()" placeholder="🔍 Pesquise por ingredientes, nomes ou estilos de cozinha...">
+    </section>
+
+    <main id="receitas" class="container">
+        <h2 class="section-title">Receitas Selecionadas & Fichas Técnicas</h2>
+        
+        <div class="grid-receitas" id="listaReceitas">
+
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80" alt="Penne ao Pesto de Manjericão">
+                <div class="card-content">
+                    <span class="tag">Culinária Italiana</span>
+                    <h3>Penne ao Pesto de Manjericão Clássico</h3>
+                    <p class="descricao-curta">Uma imersão na tradição da Ligúria. O molho pesto autêntico combina folhas de manjericão fresco, nozes ou pinoli tostados, alho, queijo parmesão e azeite extra virgem de altíssima qualidade.</p>
+                    <div class="detalhes-tecnicos">
+                        <span><strong>Tempo:</strong> 25 min</span> | <span><strong>Dificuldade:</strong> Fácil</span>
+                    </div>
+                    <button onclick="abrirModal('Penne ao Pesto', '350g de Penne, 2 xícaras de Manjericão fresco, 1/2 xícara de Parmesão ralado, 1/3 xícara de Nozes, 1/2 xícara de Azeite, 1 dente de Alho.', '1. Cozinhe a massa em abundante água salgada até ficar al dente.\n2. Em um processador ou pilão, processe o alho, as nozes e o manjericão até virar uma pasta.\n3. Adicione o queijo e emulsione regando o azeite aos poucos em fio contínuo.\n4. Misture o molho frio à massa recém-escorrida com um pouco da água do cozimento.')">Ver Receita Detalhada</button>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80" alt="Hambúrguer Gourmet">
+                <div class="card-content">
+                    <span class="tag">Gourmet & Lanches</span>
+                    <h3>Hambúrguer Artesanal com Queijo Cheddar</h3>
+                    <p class="descricao-curta">A física da selagem perfeita. Blend com proporção exata de 80% de acém e 20% de gordura de peito bovino, selado na chapa extremamente quente para ativar a Reação de Maillard.</p>
+                    <div class="detalhes-tecnicos">
+                        <span><strong>Tempo:</strong> 40 min</span> | <span><strong>Dificuldade:</strong> Média</span>
+                    </div>
+                    <button onclick="abrirModal('Hambúrguer Artesanal', '180g de carne moída (80/20), 2 fatias de queijo Cheddar inglês, 1 pão Brioche, Sal de parrilla e Pimenta-do-reino.', '1. Molde a carne sem pressionar excessivamente para manter a suculência.\n2. Aqueça uma frigideira de ferro até começar a fumegar.\n3. Tempere a carne com sal e pimenta apenas momentos antes de colocar na chapa.\n4. Sele por 3 minutos de um lado, vire, cubra com o queijo e abafe por mais 2 minutos.\n5. Toste o pão com manteiga antes de montar.')">Ver Receita Detalhada</button>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&q=80" alt="Torta Trufada de Cacau">
+                <div class="card-content">
+                    <span class="tag">Confeitaria Fina</span>
+                    <h3>Torta Trufada com Frutas Vermelhas</h3>
+                    <p class="descricao-curta">O equilíbrio supremo da doçura e acidez. Esta sobremesa utiliza ganache emulsificada de chocolate 70% cacau sob uma base crocante de biscoitos amanteigados e finalizada com frutas frescas.</p>
+                    <div class="detalhes-tecnicos">
+                        <span><strong>Tempo:</strong> 1h 20min</span> | <span><strong>Dificuldade:</strong> Avançada</span>
+                    </div>
+                    <button onclick="abrirModal('Torta Trufada', '200g de biscoito de chocolate, 80g de manteiga derretida, 300g de chocolate 70%, 200g de creme de leite fresco, Frutas vermelhas para decorar.', '1. Triture os biscoitos, misture com a manteiga e forre uma forma de fundo removível.\n2. Aqueça o creme de leite até quase ferver e verta sobre o chocolate picado.\n3. Misture suavemente do centro para fora até obter uma ganache brilhante e homogênea.\n4. Despeje na base e leve à geladeira por 4 horas.\n5. Decore com morangos, mirtilos e framboesas antes de servir.')">Ver Receita Detalhada</button>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=600&q=80" alt="Risoto de Cogumelos">
+                <div class="card-content">
+                    <span class="tag">Alta Gastronomia</span>
+                    <h3>Risoto de Cogumelos Shimeji e Paris</h3>
+                    <p class="descricao-curta">Um estudo de cremosidade sem acréscimo de creme de leite. A liberação lenta de amido do arroz Arbóreo combinada ao caldo caseiro de vegetais e azeite trufado ao finalizar.</p>
+                    <div class="detalhes-tecnicos">
+                        <span><strong>Tempo:</strong> 50 min</span> | <span><strong>Dificuldade:</strong> Média</span>
+                    </div>
+                    <button onclick="abrirModal('Risoto de Cogumelos', '200g de Arroz Arbóreo, 200g de Cogumelos frescos, 1/2 taça de Vinho Branco seco, 1L de Caldo de Legumes quente, 50g de Manteiga gelada, Parmesão.', '1. Refogue os cogumelos na manteiga em fogo alto e reserve.\n2. Na mesma panela, suando cebola, toste o arroz por 2 minutos.\n3. Adicione o vinho branco e reduza até evaporar o álcool.\n4. Adicione o caldo quente concha por concha, mexendo sempre.\n5. Quando o arroz estiver al dente, desligue o fogo e incorpore a manteiga gelada e o queijo para o processo de mantecatura.')">Ver Receita Detalhada</button>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80" alt="Salada Mediterrânea">
+                <div class="card-content">
+                    <span class="tag">Saudável & Leve</span>
+                    <h3>Salada Mediterrânea Crocante com Feta</h3>
+                    <p class="descricao-curta">Frescor e textura em perfeita harmonia. Vegetais orgânicos cortados em cubos uniformes, azeitonas pretas Kalamata e vinagrete de limão siciliano com orégano selvagem.</p>
+                    <div class="detalhes-tecnicos">
+                        <span><strong>Tempo:</strong> 20 min</span> | <span><strong>Dificuldade:</strong> Muito Fácil</span>
+                    </div>
+                    <button onclick="abrirModal('Salada Mediterrânea', '2 Tomates maduros, 1 Pepino japonês, 1/2 Cebola roxa, 100g de Queijo Feta, Azeitonas pretas, Azeite, Limão Siciliano e Orégano.', '1. Corte o tomate e o pepino em cubos médios regulares.\n2. Fatie a cebola roxa em lâminas finas.\n3. Misture os vegetais com as azeitonas em uma saladeira.\n4. Emulsionar o azeite de oliva com o suco de limão e o orégano.\n5. Regue a salada e finalize com o queijo feta esfarelado por cima.')">Ver Receita Detalhada</button>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=80" alt="Poke Bowl de Salmão">
+                <div class="card-content">
+                    <span class="tag">Culinária Fusão</span>
+                    <h3>Poke Bowl de Salmão Fresco e Abacate</h3>
+                    <p class="descricao-curta">A união do frescor havaiano com técnicas orientais. Salmão cortado em cubos perfeitos, servido sobre arroz temperado estilo sushi, acompanhado de manga doce e lâminas de abacate.</p>
+                    <div class="detalhes-tecnicos">
+                        <span><strong>Tempo:</strong> 30 min</span> | <span><strong>Dificuldade:</strong> Fácil</span>
+                    </div>
+                    <button onclick="abrirModal('Poke Bowl', '200g de Salmão para sushi, 1 xícara de Arroz Gohan, 1/2 Abacate, 1/2 Manga, Shoyu, Óleo de gergelim e Sementes de gergelim tostadas.', '1. Cozinhe o arroz oriental e tempere com o molho de vinagre e açúcar.\n2. Corte o salmão fresco em cubos de 1,5cm e tempere com shoyu e um fio de óleo de gergelim.\n3. Monte a tigela colocando o arroz morno na base.\n4. Disponha o salmão, a manga e o abacate fatiado lado a lado.\n5. Salpique gergelim e sirva imediatamente.')">Ver Receita Detalhada</button>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <section id="galeria" class="secao-galeria">
+        <div class="container">
+            <h2 class="section-title">Galeria Inspiradora da Cozinha</h2>
+            <p class="subtitulo-galeria">A gastronomia também se aprecia com os olhos. Confira alguns dos momentos e criações que inspiram nossos menus:</p>
+            
+            <div class="mural-imagens">
+                <div class="mural-item">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" alt="Prato Gourmet Decorado">
+                    <div class="legenda">Finalização de Pratos</div>
+                </div>
+                <div class="mural-item">
+                    <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=600&q=80" alt="Café da Manhã Completo">
+                    <div class="legenda">Café da Manhã Artesanal</div>
+                </div>
+                <div class="mural-item">
+                    <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=600&q=80" alt="Ingredientes Frescos">
+                    <div class="legenda">Seleção de Ingredientes Orgânicos</div>
+                </div>
+                <div class="mural-item">
+                    <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=600&q=80" alt="Sobremesas Fina">
+                    <div class="legenda">Confeitaria Clássica</div>
+                </div>
+                <div class="mural-item">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80" alt="Costela Assada">
+                    <div class="legenda">Assados Lentamente</div>
+                </div>
+                <div class="mural-item">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80" alt="Pizza Artesanal">
+                    <div class="legenda">Pizzas de Fermentação Natural</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tecnicas" class="section-tecnicas">
+        <div class="container">
+            <h2 class="section-title">Manual de Química e Técnicas Culinárias</h2>
+            
+            <div class="tecnicas-grid">
+                <div class="tecnica-item">
+                    <h3>1. Reação de Maillard e Caramelização</h3>
+                    <p>Muitas pessoas confundem os dois processos, mas são quimicamente distintos. A <strong>Reação de Maillard</strong> ocorre quando proteínas e aminoácidos reagem com açúcares redutores sob calor alto (a partir de 140°C), produzindo a crosta marrom rica e saborosa em carnes, pães e grãos de café. Já a <strong>Caramelização</strong> é a pirólise dos açúcares puramente (acima de 160°C), comum no preparo de caldas e vegetais adocicados.</p>
+                </div>
+
+                <div class="tecnica-item">
+                    <h3>2. A Tríade da Acidez, Sal e Gordura</h3>
+                    <p>O equilíbrio gustativo perfeito de um prato repousa sobre quatro pilares: Sal, Gordura, Ácido e Calor. O sal realça os sabores naturais e quebra o amargor. A gordura transporta os aromas lipossolúveis e traz suntuosidade à boca. A acidez (vinagres, cítricos, vinhos) corta o peso da gordura e limpa o paladar a cada garfada.</p>
+                </div>
+
+                <div class="tecnica-item">
+                    <h3>3. Emulsões Estáveis e Instáveis</h3>
+                    <p>Uma emulsão é a mistura forçada de dois líquidos imiscíveis (como água e óleo). Molhos como vinagrete são emulsões temporárias que se separam com o tempo. Já a maionese e o molho holandês utilizam emulsificantes naturais (como a lecitina presente na gema de ovo) para criar uma estrutura estável e extremamente aveludada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="recipeModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="fecharModal()">&times;</span>
+            <h2 id="modalTitle">Nome da Receita</h2>
+            <hr>
+            <h3>🧂 Ingredientes Necessários</h3>
+            <p id="modalIngredients">Lista de ingredientes...</p>
+            <h3>👨‍🍳 Passo a Passo de Preparo</h3>
+            <p id="modalInstructions">Instruções...</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Ateliê Gastronômico. Guia completo sobre a ciência, arte e sabor da cozinha.</p>
+        <p>Desenvolvido com dedicação para entusiastas do mundo culinário.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
